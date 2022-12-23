@@ -17,13 +17,15 @@
         }
     },
     "surveys": {
+      "place-notes": "TimeUseSurvey",
+      "trip-notes": "TimeUseSurvey",
       "TripConfirmSurvey": {
         "formPath": "https://raw.githubusercontent.com/sebastianbarry/nrel-openpath-deploy-configs/dynamic-surveys/enketo_surveys/data-json/trip-end-survey-multiple-select.json",
         "version": 1.2,
         "compatibleWith": 1,
         "dataKey": "manual/trip_user_input",
         "not-filled-in-label": {
-          "en": "Add trip details",
+          "en": "Add trip detais",
           "es": "Agregar detalles del viaje"
         },
         "filled-in-label": {
