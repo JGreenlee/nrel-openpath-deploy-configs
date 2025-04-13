@@ -1,0 +1,58 @@
+name: Update Deployment Config
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment:
+        required: true
+        type: string
+        description: Name of the deployment to update config for (e.g. nrel-commute)
+      script_name:
+        required: true
+        type: choice
+        options:
+          - update_admin_access
+      script_args:
+        required: false
+        type: string
+        description: Additional arguments for the script (space-separated)
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  update_config:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Create update branch
+        id: create_branch
+        run: |
+          BRANCH_NAME="config-update-${{ github.event.inputs.script_name }}-${{ github.run_id }}"
+          git checkout -b $BRANCH_NAME
+          echo "BRANCH_NAME=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Run config update script
+        run: |
+          python bin/config_update_scripts/${{ inputs.script_name }}.py ${{ inputs.deployment }} ${{ inputs.script_args }}
+
+      - name: Commit and PR changes if needed
+        run: |
+          if [ -f /tmp/commit_message.txt ]; then
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git add .
+            git commit -F /tmp/commit_message.txt
+            git push --set-upstream origin ${{ steps.create_branch.outputs.BRANCH_NAME }}
+            gh pr create --base main --head ${{ steps.create_branch.outputs.BRANCH_NAME }} --fill
+          else
+            echo "No changes to commit."
+          fi
