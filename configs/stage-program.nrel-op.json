@@ -37,19 +37,19 @@
         }
     },
     "survey_info": {
-      "surveys": {
-        "UserProfileSurvey": {
-          "formPath": "json/demo-survey-v2.json",
-          "version": 1,
-          "compatibleWith": 1,
-          "dataKey": "manual/demographic_survey",
-          "labelTemplate": {
-            "en": "Answered",
-            "es": "Contestada"
-          }
-        }
-      },
-      "trip-labels": "MULTILABEL"
+        "surveys": {
+            "UserProfileSurvey": {
+                "formPath": "json/demo-survey-v2.json",
+                "version": 1,
+                "compatibleWith": 1,
+                "dataKey": "manual/demographic_survey",
+                "labelTemplate": {
+                    "en": "Answered",
+                    "es": "Contestada"
+                }
+            }
+        },
+        "trip-labels": "MULTILABEL"
     },
     "display_config": {
         "use_imperial": false
@@ -58,8 +58,12 @@
         "include_test_users": true
     },
     "push_notifications": {
-        "title": { "en": "Custom push notification title" },
-        "message": { "en": "Custom push notification message from the dynamic config" },
+        "title": {
+            "en": "Custom push notification title"
+        },
+        "message": {
+            "en": "Custom push notification message from the dynamic config"
+        },
         "recent_user_input_threshold": 7
     },
     "profile_controls": {
@@ -67,6 +71,9 @@
         "trip_end_notification": false
     },
     "admin_dashboard": {
+        "admin_access": [
+            "foo@bar.baz"
+        ],
         "overview_users": true,
         "overview_active_users": true,
         "overview_trips": true,
