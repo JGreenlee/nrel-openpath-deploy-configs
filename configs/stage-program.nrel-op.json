@@ -96,7 +96,8 @@
         "options_uuids": true,
         "options_emails": true,
         "admin_access": [
-            "aa@bb.cc"
+            "aa@bb.cc",
+            "dd@ee.ff"
         ]
     }
 }
