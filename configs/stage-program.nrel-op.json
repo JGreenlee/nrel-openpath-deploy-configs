@@ -79,7 +79,8 @@
     "admin_dashboard": {
         "admin_access": [
             "foo@bar.baz",
-            "aa@bb.cc"
+            "aa@bb.cc",
+            "dd@ee.ff"
         ],
         "overview_users": true,
         "overview_active_users": true,
