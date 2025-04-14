@@ -1,0 +1,6 @@
+{
+  "name": "nrel-openpath-deploy-configs",
+  "version": "1.0.0",
+  "main": "configs.d.ts",
+  "types": "configs.d.ts"
+}

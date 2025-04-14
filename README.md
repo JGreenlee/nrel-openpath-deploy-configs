@@ -18,13 +18,13 @@ Config file submission will begin the process of creating an admin dashboard and
 
 #Run the email-config.py script, and pass the path to the config file in as an argument:
 
-`python email-config.py -l /path/to/configfile.nrel-op.json`
+`python bin/sync_admin_user_pool/email-config.py -l /path/to/configfile.nrel-op.json`
 
 An email with instructions + admin dashboard link will be sent to all emails listed in the admin access section.
 
 ### Reviewing and testing
 - contact us by email at openpath@nrel.gov for access to staging apps (Android or IOS)
-- also reach out to recieve an OPcode for stage study or stage program
+- also reach out to recieve an OPcode for stage-study or stage-program
   
 #### Programs vs studies
 
