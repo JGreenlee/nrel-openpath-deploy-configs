@@ -97,7 +97,8 @@
         "options_emails": true,
         "admin_access": [
             "aa@bb.cc",
-            "dd@ee.ff"
+            "dd@ee.ff",
+            "gg@hh.ii"
         ]
     }
 }
