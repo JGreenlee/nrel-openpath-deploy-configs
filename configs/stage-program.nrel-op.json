@@ -83,7 +83,8 @@
             "dd@ee.ff",
             "gg@hh.ii",
             "jj@kk.ll",
-            "mm@nn.oo"
+            "mm@nn.oo",
+            "pp@qq.rr"
         ],
         "overview_users": true,
         "overview_active_users": true,
