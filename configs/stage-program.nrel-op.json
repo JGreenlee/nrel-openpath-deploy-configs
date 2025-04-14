@@ -80,7 +80,8 @@
         "admin_access": [
             "foo@bar.baz",
             "aa@bb.cc",
-            "dd@ee.ff"
+            "dd@ee.ff",
+            "gg@hh.ii"
         ],
         "overview_users": true,
         "overview_active_users": true,
