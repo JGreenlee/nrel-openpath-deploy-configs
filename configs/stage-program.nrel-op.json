@@ -81,7 +81,8 @@
             "foo@bar.baz",
             "aa@bb.cc",
             "dd@ee.ff",
-            "gg@hh.ii"
+            "gg@hh.ii",
+            "jj@kk.ll"
         ],
         "overview_users": true,
         "overview_active_users": true,
