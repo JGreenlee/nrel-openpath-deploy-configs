@@ -88,7 +88,8 @@
             "ss@tt.uu",
             "vv@ww.xx",
             "yy@zz.aa",
-            "bb@cc.dd"
+            "bb@cc.dd",
+            "ee@ff.gg"
         ],
         "overview_users": true,
         "overview_active_users": true,
