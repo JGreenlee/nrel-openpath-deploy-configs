@@ -1,0 +1,22 @@
+{
+  "name": "nrel-openpath-deploy-configs",
+  "version": "1.0.0",
+  "description": "Publishing them on GitHub allows transparency around how they are configured. This may not be the long-term solution, but it allows us to make progress over the short/medium term.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-mission/nrel-openpath-deploy-configs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e-mission/nrel-openpath-deploy-configs/issues"
+  },
+  "homepage": "https://github.com/e-mission/nrel-openpath-deploy-configs#readme",
+  "dependencies": {
+    "typescript-json-schema": "^0.65.1"
+  }
+}

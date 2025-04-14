@@ -1,0 +1,36 @@
+name: Validate Configs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_run:
+    workflows: ["Update Deployment Config"]
+    types:
+      - completed
+
+jobs:
+  validate_configs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install typescript-json-schema
+        run: npm install -g typescript-json-schema
+
+      - name: Generate JSON schema
+        run: npx typescript-json-schema configTypes.ts AppConfig --noExtraProps --required --out config.schema.json
+
+      - name: Validate all configs against config.schema.json
+        uses: cardinalby/schema-validator-action@v3
+        with:
+          file: 'configs/*.json'
+          schema: 'config.schema.json'
