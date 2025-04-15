@@ -94,6 +94,9 @@
         "map_trip_lines": true,
         "push_send": true,
         "options_uuids": true,
-        "options_emails": true
+        "options_emails": true,
+        "admin_access": [
+            "one@foo.bar"
+        ]
     }
 }
