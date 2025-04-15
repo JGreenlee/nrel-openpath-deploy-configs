@@ -97,7 +97,8 @@
         "options_emails": true,
         "admin_access": [
             "one@foo.bar",
-            "two@foo.baz"
+            "two@foo.baz",
+            "three@foo.baz"
         ]
     }
 }
