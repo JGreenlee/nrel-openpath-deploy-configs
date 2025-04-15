@@ -96,7 +96,8 @@
         "options_uuids": true,
         "options_emails": true,
         "admin_access": [
-            "one@foo.bar"
+            "one@foo.bar",
+            "two@foo.baz"
         ]
     }
 }
