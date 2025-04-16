@@ -98,7 +98,8 @@
         "admin_access": [
             "one@foo.bar",
             "two@foo.baz",
-            "three@foo.baz"
+            "three@foo.baz",
+            "rsimpson@nrel.gov"
         ]
     }
 }
